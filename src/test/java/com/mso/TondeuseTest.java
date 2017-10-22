@@ -9,6 +9,7 @@ public class TondeuseTest {
 	
 	Tondeuse tondeuse = new Tondeuse();	
 	Position position = new Position();
+	Position expectedPosition = new Position();
 	Perimeter perimeter;
 	
 	@Test
@@ -20,11 +21,15 @@ public class TondeuseTest {
 		position.setY(5);
 		position.setOrientation('N');		
 		tondeuse.setPosition(position);
+		
 		tondeuse.deplacerTondeuse('A');
 		
-		assertEquals(0, tondeuse.getPosition().getX());
-		assertEquals(5, tondeuse.getPosition().getY());
+		expectedPosition.setX(0);
+		expectedPosition.setY(5);
+		expectedPosition.setOrientation('N');
 		
+		assertEquals(expectedPosition, tondeuse.getPosition());		
+	
 				
 	}
 	
@@ -37,11 +42,14 @@ public class TondeuseTest {
 		position.setY(1);
 		position.setOrientation('N');		
 		tondeuse.setPosition(position);
+		
 		tondeuse.deplacerTondeuse('A');
 		
-		assertEquals(0, tondeuse.getPosition().getX());
-		assertEquals(2, tondeuse.getPosition().getY());
+		expectedPosition.setX(0);
+		expectedPosition.setY(2);
+		expectedPosition.setOrientation('N');
 		
+		assertEquals(expectedPosition, tondeuse.getPosition());
 				
 	}
 	
@@ -54,12 +62,15 @@ public class TondeuseTest {
 		position.setY(3);
 		position.setOrientation('S');		
 		tondeuse.setPosition(position);
+		
 		tondeuse.deplacerTondeuse('A');
 		
-		assertEquals(2, tondeuse.getPosition().getX());
-		assertEquals(2, tondeuse.getPosition().getY());
+		expectedPosition.setX(2);
+		expectedPosition.setY(2);
+		expectedPosition.setOrientation('S');
 		
-				
+		assertEquals(expectedPosition, tondeuse.getPosition());
+			
 	}
 	
 	@Test
@@ -71,11 +82,14 @@ public class TondeuseTest {
 		position.setY(0);
 		position.setOrientation('S');		
 		tondeuse.setPosition(position);
+		
 		tondeuse.deplacerTondeuse('A');
 		
-		assertEquals(2, tondeuse.getPosition().getX());
-		assertEquals(0, tondeuse.getPosition().getY());
+		expectedPosition.setX(2);
+		expectedPosition.setY(0);
+		expectedPosition.setOrientation('S');
 		
+		assertEquals(expectedPosition, tondeuse.getPosition());		
 				
 	}	
 	
@@ -89,13 +103,15 @@ public class TondeuseTest {
 		position.setY(1);
 		position.setOrientation('E');		
 		tondeuse.setPosition(position);
+		
 		tondeuse.deplacerTondeuse('A');
 		
-		assertEquals(1, tondeuse.getPosition().getX());
-		assertEquals(1, tondeuse.getPosition().getY());
+		expectedPosition.setX(1);
+		expectedPosition.setY(1);
+		expectedPosition.setOrientation('E');
 		
-		
-				
+		assertEquals(expectedPosition, tondeuse.getPosition());		
+			
 	}
 
 	@Test
@@ -107,12 +123,15 @@ public class TondeuseTest {
 		position.setY(5);
 		position.setOrientation('E');		
 		tondeuse.setPosition(position);
+		
 		tondeuse.deplacerTondeuse('A');
 		
-		assertEquals(5, tondeuse.getPosition().getX());
-		assertEquals(5, tondeuse.getPosition().getY());
+		expectedPosition.setX(5);
+		expectedPosition.setY(5);
+		expectedPosition.setOrientation('E');
 		
-		
+		assertEquals(expectedPosition, tondeuse.getPosition());		
+
 				
 	}
 	
@@ -126,13 +145,15 @@ public class TondeuseTest {
 		position.setY(2);
 		position.setOrientation('W');		
 		tondeuse.setPosition(position);
+		
 		tondeuse.deplacerTondeuse('A');
 		
-		assertEquals(3, tondeuse.getPosition().getX());
-		assertEquals(2, tondeuse.getPosition().getY());
+		expectedPosition.setX(3);
+		expectedPosition.setY(2);
+		expectedPosition.setOrientation('W');
 		
-		
-				
+		assertEquals(expectedPosition, tondeuse.getPosition());		
+			
 	}
 	
 	@Test
@@ -144,13 +165,15 @@ public class TondeuseTest {
 		position.setY(0);
 		position.setOrientation('W');		
 		tondeuse.setPosition(position);
+		
 		tondeuse.deplacerTondeuse('A');
 		
-		assertEquals(0, tondeuse.getPosition().getX());
-		assertEquals(0, tondeuse.getPosition().getY());
+		expectedPosition.setX(0);
+		expectedPosition.setY(0);
+		expectedPosition.setOrientation('W');
 		
-		
-				
+		assertEquals(expectedPosition, tondeuse.getPosition());		
+	
 	}
 	
 	@Test
