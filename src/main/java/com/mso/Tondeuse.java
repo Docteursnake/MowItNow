@@ -27,57 +27,65 @@ public class Tondeuse {
 		
 	
 	public Position pivoterTondeuse(char newOrdre){
+		
+		if(newOrdre == 'G'){
 			
-	        if(newOrdre == 'G' && position.getOrientation() == 'N'){	            
-	            position.setOrientation('W');
-	            return position;
-	            
-	        }
-	        
-	        if(newOrdre == 'D' && position.getOrientation() == 'N'){
+			 if(position.getOrientation() == 'N'){	            
+		            position.setOrientation('W');
+		            return position;
+		            
+		        }
+			 
+			 if(position.getOrientation() == 'S'){
+		            position.setOrientation('E');
+		            return position;
+		            
+		        }
+			 
+			 if(position.getOrientation() == 'E'){
+		            position.setOrientation('N');
+		            return position;
+		            
+		        }
+			 
+			 if(position.getOrientation() == 'W'){
+		            position.setOrientation('S');
+		            return position;
+		            
+		        }
+		        
+			
+		}
+			
+	    if(newOrdre == 'D'){
+	    	
+	    	if(position.getOrientation() == 'N'){
 	            position.setOrientation('E');
 	            return position;
 	            
-	        }
+	        }	       
 	        
-	        if(newOrdre == 'G' && position.getOrientation() == 'S'){
-	            position.setOrientation('E');
-	            return position;
-	            
-	        }
-	        
-	        if(newOrdre == 'D' && position.getOrientation() == 'S'){
+	        if(position.getOrientation() == 'S'){
 	            position.setOrientation('W');
 	            return position;
 	            
-	        }
+	        }	       
 	        
-	        if(newOrdre == 'G' && position.getOrientation() == 'E'){
-	            position.setOrientation('N');
-	            return position;
-	            
-	        }
-	        
-	        if(newOrdre == 'D' && position.getOrientation() == 'E'){
+	        if(position.getOrientation() == 'E'){
 	            position.setOrientation('S');
 	            return position;
 	            
-	        }	
+	        }		        
 	        
-	        if(newOrdre == 'G' && position.getOrientation() == 'W'){
-	            position.setOrientation('S');
-	            return position;
-	            
-	        }
-	        
-	        if(newOrdre == 'D' && position.getOrientation() =='W'){
+	        if(position.getOrientation() =='W'){
 	            position.setOrientation('N');
 	            return position;
 	            
 	        }        
-	       
+	    	
+	    }       
 	        
-	        return position;
+	    return position;
 	        
 	        
 	 }
