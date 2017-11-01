@@ -91,29 +91,31 @@ public class Tondeuse {
 	 }
 	
 	 public Position deplacerTondeuse(char newOrdre){  
-		 	
-	    	
-	        if(newOrdre == 'A' && position.getOrientation() == 'N'){
-	        	
-	        	avancerVersNord();
-	           
-	        }
-	        
-	        if(newOrdre == 'A' && position.getOrientation() == 'S'){
-	           
-	        	avancerVersSud();
-	        }
-	        
-	        if(newOrdre == 'A' && position.getOrientation() == 'E'){
-	            
-	        	avancerVersEst();
-	        }
-	        
-	        if(newOrdre == 'A' && position.getOrientation() == 'W'){
-	        	avancerVersWest();
-	        
-	        }
-	        
+		 
+		 	if(newOrdre == 'A'){
+		 		
+		 		 if(position.getOrientation() == 'N'){
+			        	
+			        	avancerVersNord();
+			           
+			        }
+			        
+		        if(position.getOrientation() == 'S'){
+		           
+		        	avancerVersSud();
+		        }
+		        
+		        if(position.getOrientation() == 'E'){
+		            
+		        	avancerVersEst();
+		        }
+		        
+		        if(position.getOrientation() == 'W'){
+		        	avancerVersWest();
+		        
+		        }
+		 		
+		 	}        
         
 	        return position;
 	    
